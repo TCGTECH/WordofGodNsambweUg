@@ -1,0 +1,159 @@
+/* ===== Word Of God Redeemed Church ===== */
+:root{
+  --ink:#16213a; --ink-soft:#243156; --glaze:#e3a02f; --bone:#faf7f2;
+  --clay:#8a4524; --text:#2b2f3a; --muted:#6b7080; --line:#e6e0d6;
+  --serif:'Fraunces',Georgia,serif; --sans:'Hanken Grotesk',Arial,sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:var(--sans);color:var(--text);background:var(--bone);line-height:1.65;font-size:1.05rem}
+img{max-width:100%;display:block}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--glaze);outline-offset:3px}
+h1,h2,h3{font-family:var(--serif);line-height:1.15;color:var(--ink)}
+h2{font-size:clamp(1.8rem,4vw,2.6rem);margin-bottom:1rem}
+h3{font-size:1.3rem;margin-bottom:.4rem}
+.wrap{width:min(1100px,92%);margin-inline:auto}
+section{padding:5rem 0}
+
+/* ---- Header / nav (no JavaScript needed) ---- */
+.site-header{position:absolute;top:0;left:0;right:0;z-index:10}
+.site-header .wrap{display:flex;align-items:center;justify-content:space-between;padding:1.2rem 0}
+.logo{display:flex;align-items:center;gap:.75rem;font-family:var(--serif);font-weight:700;font-size:1.2rem;color:#fff;text-decoration:none;line-height:1.1}
+.logo-mark{width:56px;height:56px;flex:none;object-fit:cover;border-radius:50%}
+.logo small{display:block;font-family:var(--sans);font-weight:400;font-size:.75rem;opacity:.8;margin-top:.2rem}
+.nav a{color:#fff;text-decoration:none;margin-left:1.8rem;font-weight:500;padding-bottom:.2rem;border-bottom:2px solid transparent}
+.nav a:hover,.nav a.active{border-color:var(--glaze)}
+.nav .btn{margin-left:1.8rem;border-bottom:0}
+#menu-toggle,.menu-btn{display:none}
+
+/* ---- Buttons ---- */
+.btn{display:inline-block;background:var(--glaze);color:var(--ink);padding:.85rem 1.6rem;border-radius:999px;font-weight:700;text-decoration:none;transition:background .2s}
+.btn:hover{background:#f0b94f}
+.btn.ghost{background:transparent;color:#fff;border:2px solid rgba(255,255,255,.7)}
+.btn.ghost:hover{background:rgba(255,255,255,.12)}
+
+/* ---- Hero ---- */
+.hero{min-height:100vh;display:flex;align-items:flex-end;color:#fff;padding:0 0 6rem;
+  background:linear-gradient(180deg,rgba(22,33,58,.55),rgba(22,33,58,.92)),
+  url(images/hero_background.jpg) center/cover,
+  radial-gradient(circle at 70% 30%,#4a3a5e,var(--ink))}
+.hero h1{color:#fff;font-size:clamp(2.8rem,8vw,6rem);max-width:12ch;margin-bottom:1.2rem}
+.hero .verse{font-family:var(--serif);font-style:italic;font-size:1.3rem;color:var(--glaze);margin-bottom:.4rem}
+.hero p{max-width:50ch;margin-bottom:2rem;opacity:.92}
+.hero .actions{display:flex;gap:1rem;flex-wrap:wrap}
+.page-hero{min-height:55vh;padding-bottom:4rem}
+.page-hero h1{font-size:clamp(2.4rem,6vw,4.5rem)}
+
+.hero2{min-height:100vh;display:flex;align-items:flex-end;color:#fff;padding:0 0 6rem;
+  background:linear-gradient(180deg,rgba(22,33,58,.55),rgba(22,33,58,.92)),
+  url(images/music.png) center/cover,
+  radial-gradient(circle at 70% 30%,#4a3a5e,var(--ink))}
+
+.hero1{min-height:100vh;display:flex;align-items:flex-end;color:#fff;padding:0 0 6rem;
+  background:linear-gradient(180deg,rgba(22,33,58,.55),rgba(22,33,58,.92)),
+  url(images/about_us.jpg) center/cover,
+  radial-gradient(circle at 70% 30%,#4a3a5e,var(--ink))}
+.hero1 h1{color:#fff;font-size:clamp(2.8rem,8vw,6rem);max-width:12ch;margin-bottom:1.2rem}
+.hero1 .verse{font-family:var(--serif);font-style:italic;font-size:1.3rem;color:var(--glaze);margin-bottom:.4rem}
+.hero1 p{max-width:50ch;margin-bottom:2rem;opacity:.92}
+.hero .actions{display:flex;gap:1rem;flex-wrap:wrap}
+
+/* ---- Service times ---- */
+.times{background:var(--ink);color:#fff}
+.times h2{color:#fff}
+.times .intro{color:#c9cfe0;max-width:55ch;margin-bottom:2.5rem}
+.day{display:grid;grid-template-columns:150px 1fr;gap:1rem 2rem;padding:1.2rem 0;border-top:1px solid rgba(255,255,255,.18);font-size:.95rem}
+.day.last-day{border-bottom:1px solid rgba(255,255,255,.18)}
+.day h3{color:var(--glaze);font-size:1.2rem}
+.slot{display:flex;justify-content:space-between;gap:1rem;padding:.25rem 0}
+.slot span:last-child{color:#c9cfe0;white-space:nowrap}
+.social-links{margin-top:3rem;padding-top:2rem;border-top:1px solid rgba(255,255,255,.18)}
+.social-links h3{color:#fff;font-size:1.5rem;margin-bottom:.35rem}
+.social-links>p{color:#c9cfe0;margin-bottom:1.5rem}
+.social-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1.5rem}
+.social-card{overflow:hidden;border:1px solid rgba(255,255,255,.18);border-radius:8px;background:rgba(255,255,255,.05);text-align:center;transition:transform .25s ease,box-shadow .25s ease}
+.social-card:hover,.social-card:focus-within{transform:translateY(-6px);box-shadow:0 12px 28px rgba(0,0,0,.3)}
+.social-image{position:relative;isolation:isolate;aspect-ratio:16/9;display:grid;place-items:center;color:#fff;font-size:2rem;font-weight:700;letter-spacing:.05em}
+.social-image::after{content:"";position:absolute;inset:0;z-index:1;background:linear-gradient(135deg,rgba(22,33,58,.05),rgba(22,33,58,.6));opacity:0;transition:opacity .25s ease;pointer-events:none}
+.social-card:hover .social-image::after,.social-card:focus-within .social-image::after{opacity:1}
+.social-image.youtube{background:#fff url("images/YouTube_logo.jpg") center/contain no-repeat}
+.social-image.tiktok{background:#fff url("images/tiktok.jpg") center/contain no-repeat}
+.social-image.whatsapp{background:#fff url("images/WhatsApp.jpg") center/contain no-repeat}
+.social-card a{display:block;padding:.85rem 1rem;color:var(--glaze);font-weight:700;text-decoration:none}
+.social-card a:hover{padding:.85rem 1rem;color:#fff;background:rgba(255,255,255,.12);transition:background .4s}
+.social-card a:hover{color:#b3ff00}
+
+/* ---- Welcome / split ---- */
+.split{display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:center}
+.photo{aspect-ratio:4/5;border-radius:6px;background:
+  url('images/pastor.png') center/cover,linear-gradient(160deg,var(--clay),var(--ink-soft))}
+.split p+p{margin-top:1rem}
+.split .btn{margin-top:1.5rem;background:var(--ink);color:#fff}
+.split .btn:hover{background:var(--ink-soft)}
+
+/* ---- Scripture band ---- */
+.scripture{background:var(--glaze);text-align:center;padding:4rem 0}
+.scripture blockquote{font-family:var(--serif);font-size:clamp(1.6rem,4vw,2.6rem);color:var(--ink);max-width:24ch;margin:auto}
+.scripture cite{display:block;margin-top:1rem;font-style:normal;font-weight:700;color:var(--ink)}
+
+/* ---- About page ---- */
+.values{display:grid;grid-template-columns:repeat(3,1fr);gap:2.5rem;margin-top:2.5rem}
+.values div{border-top:3px solid var(--glaze);padding-top:1rem}
+.beliefs{background:#fff}
+.beliefs ul{list-style:none;max-width:70ch}
+.beliefs li{padding:1rem 0;border-bottom:1px solid var(--line)}
+.beliefs strong{font-family:var(--serif);color:var(--ink)}
+
+/* ---- Visit / footer ---- */
+.visit{background:var(--bone);text-align:center}
+.visit p{max-width:50ch;margin:0 auto 1.5rem}
+.site-footer{background:var(--ink);color:#c9cfe0;padding:3rem 0 2rem;font-size:.95rem}
+.site-footer .wrap{display:grid;grid-template-columns:2fr 1fr 1fr;gap:2rem}
+.site-footer h3{color:#fff;font-size:1.1rem}
+.site-footer a{text-decoration:none;display:block;padding:.15rem 0}
+.site-footer a:hover{color:var(--glaze)}
+.copy{text-align:center;margin-top:2.5rem;font-size:.85rem;opacity:.7}
+
+/* ---- Mobile ---- */
+@media (max-width:800px){
+  section{padding:3.5rem 0}
+  .menu-btn{display:block;color:#fff;font-weight:700;cursor:pointer;border:2px solid rgba(255,255,255,.7);padding:.4rem 1rem;border-radius:999px}
+  .logo{gap:.5rem;font-size:1rem}
+  .logo-mark{width:44px;height:44px}
+  .logo small{font-size:.7rem}
+  .nav{display:none;position:absolute;top:100%;left:0;right:0;background:var(--ink);padding:1rem 4%;flex-direction:column}
+  #menu-toggle:checked ~ .nav{display:flex}
+  .nav a,.nav .btn{margin:0;padding:.8rem 0;display:block}
+  .nav .btn{text-align:center;margin-top:.5rem}
+  .day{grid-template-columns:1fr;gap:.4rem}
+  .social-grid{grid-template-columns:1fr}
+  .social-image{aspect-ratio:2/1}
+  .split,.values,.site-footer .wrap{grid-template-columns:1fr}
+  .split{gap:2rem}
+  .photo{aspect-ratio:16/10}
+}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
+
+/* ---- Church music page ---- */
+.music-section{background:linear-gradient(180deg,var(--bone),#fff)}
+.music-section h2{color:var(--ink)}
+.music-intro{max-width:60ch;color:var(--muted);margin-bottom:2rem}
+.music-list{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1.5rem}
+.song{background:#fff;border:1px solid var(--line);border-radius:10px;padding:1.5rem;border-top:4px solid var(--glaze);box-shadow:0 8px 24px rgba(22,33,58,.08)}
+.song h3{margin-bottom:.1rem}
+.song .meta{color:var(--muted);font-size:.9rem;margin-bottom:1rem}
+.song audio,.song video{width:100%;border-radius:6px;display:block}
+.song video{background:#000;margin-bottom:.5rem}
+.song audio{margin-bottom:.5rem}
+.controls{display:flex;flex-wrap:wrap;gap:.6rem;margin-top:.8rem}
+.controls button,.controls a{font:inherit;font-weight:700;font-size:.9rem;cursor:pointer;text-decoration:none;padding:.55rem 1rem;border-radius:999px;border:2px solid var(--ink);background:transparent;color:var(--ink)}
+.controls button:hover{background:var(--ink);color:#fff}
+.controls a.download{background:var(--glaze);border-color:var(--glaze)}
+.controls a.download:hover{background:#f0b94f;border-color:#f0b94f}
+@media (max-width:800px){.music-list{grid-template-columns:1fr}}
+
+/* ---- Scroll reveal ---- */
+.scroll-reveal{opacity:0;transform:translateY(24px);transition:opacity .65s ease,transform .65s ease}
+.scroll-reveal.is-visible{opacity:1;transform:translateY(0)}
+@media (prefers-reduced-motion:reduce){.scroll-reveal,.scroll-reveal.is-visible{opacity:1;transform:none;transition:none}}
